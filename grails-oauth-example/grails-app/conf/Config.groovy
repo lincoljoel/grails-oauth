@@ -35,7 +35,7 @@ grails.enable.native2ascii = true
 // set per-environment serverURL stem for creating absolute links
 environments {
     production {
-        grails.serverURL = "http://www.changeme.com"
+        grails.serverURL = "http://demo.raibledesigns.com/grails-oauth"
     }
     development {
         grails.serverURL = "http://localhost:8080/${appName}"
@@ -69,5 +69,14 @@ log4j = {
     warn   'org.mortbay.log'
 }
 
+oauth {
+	linkedin {
+		requestTokenUrl="https://api.linkedin.com/uas/oauth/requestToken"
+		accessTokenUrl="https://api.linkedin.com/uas/oauth/accessToken"
+		authUrl="https://api.linkedin.com/uas/oauth/authorize"
+		consumer.key="h1vdy1qwYP9sFc9pCba5E9EgsQvFp49xNNpH44qtI2FMX9gUUvB1wq1efEpZAZuD"
+		consumer.secret="IWCcU97gRcWpMkzFvwW5VhAq1qFPLhXRfC1OqUYAy8O3yyncsp89I-pUGM5z6E9D"
+	}
+}
 
      

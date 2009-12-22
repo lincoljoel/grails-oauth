@@ -1,0 +1,23 @@
+1. Download and install Grails 1.1.2. Set GRAILS_HOME and add 
+   and add $GRAILS_HOME/bin to your $PATH.
+
+     http://grails.org/Download
+
+2. Download the oauth-plugin for Grails.
+
+     http://github.com/mraible/grails-oauth/zipball/master
+
+3. Extract the plugin and build it.
+
+     grails package-plugin
+
+4. Install the plugin in this project.
+
+     grails install-plugin path/to/zip
+
+5. Create LinkedIn API keys at http://developer.linkedin.com/community/apis 
+   and set your callback URL to be:
+
+     http://localhost:8080/grails-oauth/oauth/callback
+
+6. Run "grails run-app" and enjoy. 

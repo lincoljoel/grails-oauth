@@ -16,5 +16,13 @@
               </g:each>
             </ul>
         </div>
+        
+        <p style="margin-left: 20px; width: 220px; margin-top: 50px; border-top: 1px dotted silver; padding-top: 10px">
+            <g:oauthLink consumer='linkedin' returnTo="[controller:'profile']">
+                <h3>Login with
+                <img src="http://static.raibledesigns.com/repository/images/linkedin-logo.gif" width="129" height="36"
+                style="float: right; border: 0"/></h3>
+            </g:oauthLink>
+        </p>
     </body>
 </html>
