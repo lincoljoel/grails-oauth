@@ -1,11 +1,11 @@
 <html>
     <head>
-        <title>Welcome to Grails</title>
+        <title>Welcome to Grails OAuth</title>
 		<meta name="layout" content="main" />
     </head>
     <body>
-        <h1 style="margin-left:20px;">Welcome to Grails</h1>
-        <p style="margin-left:20px;width:80%">Congratulations, you have successfully started your first Grails application! At the moment
+        <h1 style="margin-left:20px;">Welcome to Grails OAuth</h1>
+        <%--<p style="margin-left:20px;width:80%">Congratulations, you have successfully started your first Grails application! At the moment
         this is the default page, feel free to modify it to either redirect to a controller or display whatever
         content you may choose. Below is a list of controllers that are currently deployed in this application,
         click on each to execute its default action:</p>
@@ -15,14 +15,14 @@
                     <li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
               </g:each>
             </ul>
-        </div>
+        </div>--%>
         
-        <p style="margin-left: 20px; width: 220px; margin-top: 50px; border-top: 1px dotted silver; padding-top: 10px">
+        <div style="margin-left: 20px; width: 220px; margin-top: 50px; border-top: 1px dotted silver; padding-top: 10px">
             <g:oauthLink consumer='linkedin' returnTo="[controller:'profile']">
                 <h3>Login with
                 <img src="http://static.raibledesigns.com/repository/images/linkedin-logo.gif" width="129" height="36"
-                style="float: right; border: 0"/></h3>
+                style="border: 0; float: right"/></h3>
             </g:oauthLink>
-        </p>
+        </div>
     </body>
 </html>
