@@ -1,4 +1,4 @@
-<plugin name='oauth' version='0.2' grailsVersion='1.1.1 &gt; *'>
+<plugin name='oauth' version='0.2' grailsVersion='1.1.2 &gt; *'>
   <author>Yong Rong (Damien) Hou</author>
   <authorEmail>houyongr@gmail.com</authorEmail>
   <title>Adds OAuth capability to Grails apps</title>

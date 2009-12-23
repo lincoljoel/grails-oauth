@@ -176,7 +176,11 @@ class OauthService implements InitializingBean{
 		accessor.requestToken = requestToken.key
 		accessor.tokenSecret = requestToken.secret
 		
-		def accessUrl = consumer.serviceProvider.accessTokenURL + "?oauth_verifier=" + requestToken.verifier
+		def accessUrl 
+		if (requestToken.verifier)
+			accessUrl = consumer.serviceProvider.accessTokenURL + "?oauth_verifier=" + requestToken.verifier
+		else 
+			accessUrl = consumer.serviceProvider.accessTokenURL
 		def req = accessor.newRequestMessage("POST", accessUrl, [oauth_token:accessor.requestToken].entrySet())
     	OAuthResponseMessage response = (OAuthResponseMessage) oauthClient.access(req, ParameterStyle.QUERY_STRING)
     	def accessToken = response.getParameter("oauth_token");

@@ -21,7 +21,15 @@
             <g:oauthLink consumer='linkedin' returnTo="[controller:'profile']">
                 <h3>Login with
                 <img src="http://static.raibledesigns.com/repository/images/linkedin-logo.gif" width="129" height="36"
-                style="border: 0; float: right"/></h3>
+                    style="border: 0; float: right"/></h3>
+            </g:oauthLink>
+        </div>
+        
+        <div style="margin-left: 20px; margin-top: 20px; width: 240px; padding-top: 10px; margin-top: 30px">
+            <g:oauthLink consumer="twitter" returnTo="[controller:'timeline']">
+                <h3>Login with 
+                <img src="http://static.raibledesigns.com/repository/images/twitter-logo.png" width="155" height="36"
+                    style="border: 0; float: right"></h3>
             </g:oauthLink>
         </div>
     </body>

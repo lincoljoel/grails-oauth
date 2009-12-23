@@ -88,7 +88,11 @@ class OauthController {
 		def oauth_verifier = params?.oauth_verifier
 		
     	try{
-			def accessToken = oauthService.fetchAccessToken(redirParams.consumer, [key:session.oauthToken.key, secret:session.oauthToken.secret, verifier:oauth_verifier])
+	        def accessToken
+			if (oauth_verifier)
+			    accessToken = oauthService.fetchAccessToken(redirParams.consumer, [key:session.oauthToken.key, secret:session.oauthToken.secret, verifier:oauth_verifier])
+			else 
+			    accessToken = oauthService.fetchAccessToken(redirParams.consumer, [key:session.oauthToken.key, secret:session.oauthToken.secret])
 			session.oauthToken = accessToken
 			log.debug("Got access token: ${accessToken.key}\nGot token secret: ${accessToken.secret}\nOAuth Verifier: ${oauth_verifier}")
 			log.debug("Saved token to session: [key]${session.oauthToken.key} [secret]${session.oauthToken.secret}")

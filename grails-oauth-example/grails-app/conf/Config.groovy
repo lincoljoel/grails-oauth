@@ -35,7 +35,7 @@ grails.enable.native2ascii = true
 // set per-environment serverURL stem for creating absolute links
 environments {
     production {
-        grails.serverURL = "http://demo.raibledesigns.com/grails-oauth"
+        grails.serverURL = "http://demo.raibledesigns.com/${appName}"
     }
     development {
         grails.serverURL = "http://localhost:8080/${appName}"
@@ -56,27 +56,34 @@ log4j = {
     //}
 
     error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
-	       'org.codehaus.groovy.grails.web.pages', //  GSP
-	       'org.codehaus.groovy.grails.web.sitemesh', //  layouts
-	       'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
-	       'org.codehaus.groovy.grails.web.mapping', // URL mapping
-	       'org.codehaus.groovy.grails.commons', // core / classloading
-	       'org.codehaus.groovy.grails.plugins', // plugins
-	       'org.codehaus.groovy.grails.orm.hibernate', // hibernate integration
-	       'org.springframework',
-	       'org.hibernate'
+           'org.codehaus.groovy.grails.web.pages', //  GSP
+           'org.codehaus.groovy.grails.web.sitemesh', //  layouts
+           'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
+           'org.codehaus.groovy.grails.web.mapping', // URL mapping
+           'org.codehaus.groovy.grails.commons', // core / classloading
+           'org.codehaus.groovy.grails.plugins', // plugins
+           'org.codehaus.groovy.grails.orm.hibernate', // hibernate integration
+           'org.springframework',
+           'org.hibernate'
 
     warn   'org.mortbay.log'
 }
 
 oauth {
-	linkedin {
-		requestTokenUrl="https://api.linkedin.com/uas/oauth/requestToken"
-		accessTokenUrl="https://api.linkedin.com/uas/oauth/accessToken"
-		authUrl="https://api.linkedin.com/uas/oauth/authorize"
-		consumer.key="h1vdy1qwYP9sFc9pCba5E9EgsQvFp49xNNpH44qtI2FMX9gUUvB1wq1efEpZAZuD"
-		consumer.secret="IWCcU97gRcWpMkzFvwW5VhAq1qFPLhXRfC1OqUYAy8O3yyncsp89I-pUGM5z6E9D"
-	}
+    linkedin {
+        requestTokenUrl="https://api.linkedin.com/uas/oauth/requestToken"
+        accessTokenUrl="https://api.linkedin.com/uas/oauth/accessToken"
+        authUrl="https://api.linkedin.com/uas/oauth/authorize"
+        consumer.key="h1vdy1qwYP9sFc9pCba5E9EgsQvFp49xNNpH44qtI2FMX9gUUvB1wq1efEpZAZuD"
+        consumer.secret="IWCcU97gRcWpMkzFvwW5VhAq1qFPLhXRfC1OqUYAy8O3yyncsp89I-pUGM5z6E9D"
+    }
+    twitter {
+        requestTokenUrl="http://twitter.com/oauth/request_token"
+        accessTokenUrl="http://twitter.com/oauth/access_token"
+        authUrl="http://twitter.com/oauth/authorize"
+        consumer.key="jXds3ENr7sslQAe50HOA"
+        consumer.secret="i4bztzzxkqiwOIlTtrIPgvsR5yX9uW3GQSWrRJsSC0c"
+    }
 }
 
      
