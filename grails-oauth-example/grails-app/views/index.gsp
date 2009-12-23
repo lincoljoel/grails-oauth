@@ -17,7 +17,9 @@
             </ul>
         </div>--%>
         
-        <div style="margin-left: 20px; width: 220px; margin-top: 50px; border-top: 1px dotted silver; padding-top: 10px">
+        <p style="margin-left: 20px; font-size: 1.1em; margin-top: 10px">For more information about this demo, see <a href="http://raibledesigns.com/rd/entry/grails_oauth_and_linkedin_apis" style="color: blue">Grails OAuth and LinkedIn APIs</a>.</p>
+        
+        <div style="margin-left: 20px; width: 220px; margin-top: 30px; border-top: 1px dotted silver; padding-top: 10px">
             <g:oauthLink consumer='linkedin' returnTo="[controller:'profile']">
                 <h3>Login with
                 <img src="http://static.raibledesigns.com/repository/images/linkedin-logo.gif" width="129" height="36"
